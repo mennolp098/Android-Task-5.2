@@ -3,26 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/GamesFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.androidtask52.FirstFragment"
+        android:id="@+id/GamesFragment"
+        android:name="com.example.androidtask52.GamesFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        tools:layout="@layout/fragment_games">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_GamesFragment_to_addGameFragment"
+            app:destination="@id/addGameFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.androidtask52.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/addGameFragment"
+        android:name="com.example.androidtask52.AddGameFragment"
+        android:label="fragment_add_game"
+        tools:layout="@layout/fragment_add_game" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_addGameFragment_to_GamesFragment"
+            app:destination="@id/GamesFragment" />
     </fragment>
 </navigation>
